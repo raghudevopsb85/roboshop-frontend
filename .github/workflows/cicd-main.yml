@@ -7,5 +7,6 @@ on:
 jobs:
   reuse:
     uses: raghudevopsb85/roboshop-github-actions/.github/workflows/ci-main.yml@main
-
+    with:
+      app_type: nginx
 
