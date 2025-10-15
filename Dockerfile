@@ -3,5 +3,5 @@ RUN             dnf module disable nginx -y && dnf module enable nginx:1.24 -y &
 ADD             ./ /usr/share/nginx/html/
 COPY            nginx.conf /etc/nginx/nginx.conf
 USER            nginx
-ENTRYPOINT      ["nginx", "-g", "daemon off;"]
+ENTRYPOINT      ["nginx", "-g", "daemon off;", "-e", "/dev/stderr"]
 
